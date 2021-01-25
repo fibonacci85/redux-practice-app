@@ -2,7 +2,7 @@
 
 const initialState = {
     isFetching: false,
-    film:{},
+    films:[],
     error:""
 }
 
@@ -17,7 +17,7 @@ export function reducer(state = initialState,action){
             return({
                 ...state,
                 isFetching:false,
-                film:action.payload
+                films:action.payload
             });
         case("FETCH_FILM_FAIL"):
             return({
